@@ -149,7 +149,7 @@ class gitolite (
     group  => 'git',
     mode   => '0750'
   } ->
-  file { "${git_home}/install.pub":
+  file { "${git_home}/${admin_user}.pub":
     content => "${git_key_type} ${git_key} ${admin_user}",
     owner   => 'git',
     group   => 'git',

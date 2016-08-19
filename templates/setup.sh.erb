@@ -2,7 +2,7 @@
 export HOME=<%= @git_home %>
 chmod +rx <%= @git_home %>
 
-gitolite setup -pk <%= @git_home %>/install.pub
+gitolite setup -pk <%= @git_home %>/<%= @admin_user %>.pub
 
 chmod +rx <%= @git_home %>/repositories -R
 chmod 700 <%= @git_home %>/repositories/gitolite-admin.git -R
